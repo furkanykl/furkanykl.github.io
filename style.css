@@ -52,6 +52,26 @@ header .logo {
   pointer-events: none;
 }
 
+.indicators {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ccc;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.dot.active {
+  background-color: #333;
+  transform: scale(1.3);
+}
+
 /* ✅ Responsive: Telefonda 2 sütun */
 @media (max-width: 768px) {
   .product-grid {
