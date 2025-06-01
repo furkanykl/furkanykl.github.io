@@ -28,7 +28,13 @@ header {
 }
 
 .logo {
-  font-size: 20px;
+  width: 150px;         /* Logonun genişliği */
+  height: 150px;         /* Logonun yüksekliği */
+  background-image: url('images/logo.png'); /* Kendi logonun yolu */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-indent: -9999px; /* Yazıyı gizle, sadece görsel görünsün */
 }
 
 /* Drawer */
