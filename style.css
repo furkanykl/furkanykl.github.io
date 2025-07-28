@@ -1,0 +1,167 @@
+/* Genel Gövde */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* Logo */
+header .logo {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* Navigasyon Barı */
+.navbar {
+  background-color: #444;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px 0;
+}
+
+.navbar a,
+.dropbtn {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Dropdown Temel */
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown Alt Menü */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #555;
+  min-width: 160px;
+  flex-direction: column;
+  z-index: 10;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  font-weight: normal;
+}
+
+.dropdown-content a:hover {
+  background-color: #666;
+}
+
+/* Masaüstü: Hover ile aç */
+@media (hover: hover) {
+  .dropdown:hover .dropdown-content {
+    display: flex;
+  }
+}
+
+/* Mobil: tıklama ile açılır */
+.dropdown.show .dropdown-content {
+  display: flex;
+}
+
+/* Ürün Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Ürün Kutusu */
+.product {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Ürün Görseli */
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.product img:hover {
+  transform: scale(1.03);
+}
+
+/* Ürün Alt Yazısı */
+.product p {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Lightbox - Büyütülmüş Görsel Alanı */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+}
+
+/* Lightbox Kapat Butonu */
+.close-btn {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  background: rgba(0,0,0,0.5);
+  padding: 5px 15px;
+  border-radius: 10px;
+  z-index: 1000;
+}
+
+/* Responsive: Tablet ve Telefonlar için */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+  }
+}

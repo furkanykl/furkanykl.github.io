@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anasayfa</title>
+  <link rel="stylesheet" href="style-index.css">
+  <style>
+    .main.shift,
+    header.shift {
+      transform: translateX(275px);
+      transition: transform 0.3s ease;
+    }
+
+    header {
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <header id="siteHeader">
+    <div class="menu-button" onclick="toggleDrawer()">
+      &#9776;
+    </div>
+    <div class="logo">
+      <img src="images/logo.png">
+    </div>
+  </header>
+
+  <div class="drawer" id="drawer">
+    <div class="drawer-section">
+      <div class="drawer-title">Nike</div>
+      <ul>
+        <li><a href="Nike.html">Tüm Nike Ürünleri</a></li>
+        <li><a href="#">Jordan</a></li>
+        <li><a href="#">Dunk</a></li>
+      </ul>
+    </div>
+    <div class="drawer-section">
+      <div class="drawer-title">Adidas</div>
+      <ul>
+        <li><a href="#">-</a></li>
+        <li><a href="#">-</a></li>
+      </ul>
+    </div>
+    <div class="drawer-section">
+      <div class="drawer-title">New Balance</div>
+      <ul>
+        <li><a href="#">-</a></li>
+        <li><a href="#">-</a></li>
+      </ul>
+    </div>
+    <div class="drawer-section">
+      <div class="drawer-title">Vans</div>
+      <ul>
+        <li><a href="#">-</a></li>
+        <li><a href="#">-</a></li>
+      </ul>
+    </div>
+    <div class="drawer-section">
+      <div class="drawer-title">Converse</div>
+      <ul>
+        <li><a href="#">-</a></li>
+        <li><a href="#">-</a></li>
+      </ul>
+    </div>
+    <div class="drawer-section">
+      <div class="drawer-title">İletişim</div>
+      <ul>
+        <li><a href="iletisim.html">İletişim</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="main" id="mainContent">
+    <div class="slider-container">
+       <a id="sliderLink" href="Nike.html">
+    <img id="slider" src="images/slider/1.png" alt="slider">
+  </a>
+    </div>
+
+    <div class="thumbnail-grid">
+      <a href="Nike.html" class="thumbnail" data-folder="images/kutular/kutu1"></a>
+      <a href="#" class="thumbnail" data-folder="images/kutular/kutu2"></a>
+      <a href="#" class="thumbnail" data-folder="images/kutular/kutu3"></a>
+      <a href="#" class="thumbnail" data-folder="images/kutular/kutu4"></a>
+      <a href="#" class="thumbnail" data-folder="images/kutular/kutu5"></a>
+      <a href="#" class="thumbnail" data-folder="images/kutular/kutu6"></a>
+    </div>
+  </div>
+
+  <script src="script-index.js"></script>
+</body>
+</html>
