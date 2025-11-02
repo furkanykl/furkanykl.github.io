@@ -6,46 +6,107 @@
   <title>İletişim</title>
   <link rel="stylesheet" href="style.css"/>
   <style>
+    body {
+      background-color: #070707;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
     .logo-img {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  height: 30px; /* Yüksekliği burada kontrol ediyorsun */
-  max-width: 30px; /* Genişliğin sınıra ulaşmasını engeller */
-  object-fit: contain; /* Oranı bozmadan sığdırır */
-}
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      height: 30px;
+      max-width: 30px;
+      object-fit: contain;
+    }
+
+    /* === NAVBAR === */
+    .navbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #111;
+      padding: 15px;
+      flex-wrap: wrap;
+    }
+
+    .navbar a {
+      color: #e0e0e0;
+      text-decoration: none;
+      margin: 10px 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+      color: white;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #222;
+      min-width: 120px;
+      z-index: 1;
+      border-radius: 5px;
+    }
+
+    .dropdown-content a {
+      display: block;
+      color: #e0e0e0;
+      padding: 10px;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #333;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
 
     h1 {
       text-align: center;
       margin-top: 80px;
       font-size: 32px;
+      color: white;
     }
 
+    /* === CONTACT === */
     .contact-container {
       max-width: 800px;
       margin: 40px auto;
-      background: white;
+      background: #1a1a1a;
       padding: 30px;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 10px rgba(255,255,255,0.05);
       text-align: center;
     }
 
     .person {
       margin: 20px 0;
       padding: 15px;
-      border: 1px solid #ccc;
+      border: 1px solid #333;
       border-radius: 10px;
-      background-color: #f9f9f9;
+      background-color: #101010;
     }
 
     .person h3 {
       margin-bottom: 5px;
+      color: #ffffff;
     }
 
     .person p {
       margin: 5px 0;
       font-size: 16px;
+      color: #cccccc;
     }
 
     .whatsapp-button {
@@ -68,12 +129,18 @@
     footer {
       text-align: center;
       padding: 20px;
-      background-color: #333;
-      color: white;
+      background-color: #111;
+      color: #e0e0e0;
       margin-top: 40px;
+      font-size: 14px;
     }
 
     @media (max-width: 600px) {
+      .navbar {
+        flex-direction: row;
+        justify-content: space-around;
+      }
+
       .contact-container {
         margin: 20px 10px;
         padding: 20px;
@@ -83,29 +150,20 @@
 </head>
 <body>
 
-  <!-- Logo sağ üst -->
   <img src="logo.png" alt="Logo" class="logo-img">
 
-  <!-- Menü -->
   <nav class="navbar">
     <a href="index.html">Anasayfa</a>
-
     <div class="dropdown">
       <a class="dropbtn" href="nike.html">Nike ▾</a>
       <div class="dropdown-content" id="nikeDropdown">
         <a href="jordan.html">Jordan</a>
         <a href="dunk.html">Dunk</a>
       </div>
-    <!--</div>
-
-    <a href="#">Adidas</a>
-    <a href="#">New Balance</a>
-    <a href="#">Vans</a>
-    <a href="#">Converse</a> -->
+    </div>
     <a href="iletisim.html">İletişim</a>
   </nav>
 
-  <!-- Sayfa başlığı -->
   <h1>İletişim</h1>
 
   <main class="contact-container">
@@ -127,20 +185,5 @@
   <footer>
     © 2025 Adra Design – Tüm hakları saklıdır.
   </footer>
-
-  <script>
-    function toggleDropdown() {
-      const dropdown = document.querySelector('.dropdown');
-      dropdown.classList.toggle('show');
-    }
-
-    document.addEventListener('click', function(event) {
-      const dropdown = document.querySelector('.dropdown');
-      if (!dropdown.contains(event.target)) {
-        dropdown.classList.remove('show');
-      }
-    });
-  </script>
 </body>
 </html>
-
