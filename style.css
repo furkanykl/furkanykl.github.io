@@ -2,13 +2,14 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
+  background-color: #070707; /* koyu arka plan */
+  color: #f0f0f0; /* açık yazı */
 }
 
 /* Logo */
 header .logo {
-  background-color: #333;
-  color: white;
+  background-color: #000; /* siyah üst bar */
+  color: #f5f5f5;
   padding: 20px;
   font-size: 24px;
   text-align: center;
@@ -16,7 +17,7 @@ header .logo {
 
 /* Navigasyon Barı */
 .navbar {
-  background-color: #444;
+  background-color: #111; /* koyu gri navbar */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -26,7 +27,7 @@ header .logo {
 
 .navbar a,
 .dropbtn {
-  color: white;
+  color: #f0f0f0; /* açık yazı */
   text-decoration: none;
   font-weight: bold;
   background: none;
@@ -44,15 +45,15 @@ header .logo {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #555;
+  background-color: #222; /* koyu gri alt menü */
   min-width: 160px;
   flex-direction: column;
   z-index: 10;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.6);
 }
 
 .dropdown-content a {
-  color: white;
+  color: #f0f0f0;
   padding: 10px 15px;
   text-decoration: none;
   display: block;
@@ -60,7 +61,7 @@ header .logo {
 }
 
 .dropdown-content a:hover {
-  background-color: #666;
+  background-color: #333; /* hover koyulaşsın */
 }
 
 /* Masaüstü: Hover ile aç */
@@ -85,14 +86,15 @@ header .logo {
 
 /* Ürün Kutusu */
 .product {
-  background-color: white;
-  border: 1px solid #ccc;
+  background-color: #1a1a1a; /* koyu gri kutu */
+  border: 1px solid #333;
   padding: 10px;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  color: #f0f0f0;
 }
 
 /* Ürün Görseli */
@@ -121,7 +123,7 @@ header .logo {
   top: 0; left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
   justify-content: center;
   align-items: center;
   z-index: 999;
