@@ -1,7 +1,8 @@
 body {
   margin: 0;
   font-family: sans-serif;
-  background-color: #e0e0e0;
+  background-color: #070707;
+   color: #f0f0f0; 
   overflow-x: hidden;
   transition: transform 0.3s ease;
 }
@@ -45,8 +46,8 @@ header {
   left: 0;
   width: 250px;
   height: 100%;
-  background-color: #444;
-  color: white;
+  background-color: #d9d9d9;  /* beyaza yakın açık gri */
+  color: #111;                /* yazılar koyu görünsün */
   padding: 10px 15px;
   transform: translateX(-100%);
   transition: transform 0.3s ease;
@@ -82,12 +83,12 @@ header {
 
 .drawer-section a {
   text-decoration: none;
-  color: #ccc;
+  color: #333; /* koyu gri */
   transition: color 0.2s;
 }
 
 .drawer-section a:hover {
-  color: white;
+  color: #000; /* üstüne gelince siyah */
 }
 
 /* İçerik */
@@ -169,3 +170,4 @@ header.shift {
   display: block;
 
 }
+
