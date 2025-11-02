@@ -17,23 +17,26 @@ header .logo {
 
 /* Navigasyon Barı */
 .navbar {
-  background-color: #d9d9d9; /* koyu gri navbar */
+  background-color: #DCD8D5; /* koyu gri navbar */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
   padding: 15px 0;
+  justify-content: space-between; /* boşluğu korur */
+  flex-wrap: nowrap;              /* satır atlamayı engeller */
 }
 
 .navbar a,
 .dropbtn {
-  color: #f0f0f0; /* açık yazı */
+  color: #070707; /* açık yazı */
   text-decoration: none;
   font-weight: bold;
   background: none;
   border: none;
   font-size: 16px;
   cursor: pointer;
+  
 }
 
 /* Dropdown Temel */
@@ -45,7 +48,7 @@ header .logo {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #d9d9d9; /* koyu gri alt menü */
+  background-color: #DCD8D5; /* koyu gri alt menü */
   min-width: 160px;
   flex-direction: column;
   z-index: 10;
@@ -86,7 +89,7 @@ header .logo {
 
 /* Ürün Kutusu */
 .product {
-  background-color: #1a1a1a; /* koyu gri kutu */
+  background-color: #DCD8D5; /* koyu gri kutu */
   border: 1px solid #333;
   padding: 10px;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
@@ -167,4 +170,5 @@ header .logo {
     box-shadow: none;
   }
 }
+
 
