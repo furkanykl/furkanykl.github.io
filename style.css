@@ -1,4 +1,4 @@
-/* Genel Gövde */
+/* === Genel Gövde === */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -6,7 +6,7 @@ body {
   color: #f0f0f0; /* açık yazı */
 }
 
-/* Logo */
+/* === Logo / Header === */
 header .logo {
   background-color: #000; /* siyah üst bar */
   color: #f5f5f5;
@@ -15,40 +15,37 @@ header .logo {
   text-align: center;
 }
 
-/* Navigasyon Barı */
+/* === Navigasyon Barı === */
 .navbar {
-  background-color: #DCD8D5; /* koyu gri navbar */
+  background-color: #DCD8D5; /* açık gri navbar */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
   padding: 15px 0;
-  justify-content: space-between; /* boşluğu korur */
-  flex-wrap: nowrap;              /* satır atlamayı engeller */
 }
 
 .navbar a,
 .dropbtn {
-  color: #070707; /* açık yazı */
+  color: #070707; /* koyu yazı */
   text-decoration: none;
   font-weight: bold;
   background: none;
   border: none;
   font-size: 16px;
   cursor: pointer;
-  
 }
 
-/* Dropdown Temel */
+/* === Dropdown Temel === */
 .dropdown {
   position: relative;
 }
 
-/* Dropdown Alt Menü */
+/* === Dropdown Alt Menü === */
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #DCD8D5; /* koyu gri alt menü */
+  background-color: #DCD8D5; /* açık gri alt menü */
   min-width: 160px;
   flex-direction: column;
   z-index: 10;
@@ -56,7 +53,7 @@ header .logo {
 }
 
 .dropdown-content a {
-  color: #f0f0f0;
+  color: #070707;
   padding: 10px 15px;
   text-decoration: none;
   display: block;
@@ -65,21 +62,22 @@ header .logo {
 
 .dropdown-content a:hover {
   background-color: #333; /* hover koyulaşsın */
+  color: #f5f5f5;
 }
 
-/* Masaüstü: Hover ile aç */
+/* === Masaüstü: Hover ile aç === */
 @media (hover: hover) {
   .dropdown:hover .dropdown-content {
     display: flex;
   }
 }
 
-/* Mobil: tıklama ile açılır */
+/* === Mobil: tıklama ile açılır === */
 .dropdown.show .dropdown-content {
   display: flex;
 }
 
-/* Ürün Grid */
+/* === Ürün Grid === */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -87,9 +85,9 @@ header .logo {
   padding: 20px;
 }
 
-/* Ürün Kutusu */
+/* === Ürün Kutusu === */
 .product {
-  background-color: #DCD8D5; /* koyu gri kutu */
+  background-color: #DCD8D5; /* açık gri kutu */
   border: 1px solid #333;
   padding: 10px;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
@@ -97,10 +95,10 @@ header .logo {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  color: #f0f0f0;
+  color: #070707;
 }
 
-/* Ürün Görseli */
+/* === Ürün Görseli === */
 .product img {
   width: 100%;
   height: auto;
@@ -113,13 +111,13 @@ header .logo {
   transform: scale(1.03);
 }
 
-/* Ürün Alt Yazısı */
+/* === Ürün Alt Yazısı === */
 .product p {
   margin-top: 10px;
   font-weight: bold;
 }
 
-/* Lightbox - Büyütülmüş Görsel Alanı */
+/* === Lightbox - Büyütülmüş Görsel Alanı === */
 .lightbox {
   display: none;
   position: fixed;
@@ -139,7 +137,7 @@ header .logo {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
 }
 
-/* Lightbox Kapat Butonu */
+/* === Lightbox Kapat Butonu === */
 .close-btn {
   position: fixed;
   top: 20px;
@@ -154,7 +152,7 @@ header .logo {
   z-index: 1000;
 }
 
-/* Responsive: Tablet ve Telefonlar için */
+/* === Tablet Görünüm === */
 @media (max-width: 768px) {
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -171,4 +169,31 @@ header .logo {
   }
 }
 
+/* === Mobil Görünüm: Üst Kısım Düzeni === */
+@media (max-width: 480px) {
+  header .logo {
+    font-size: 18px;          /* yazı küçülür */
+    padding: 10px;            /* daha az boşluk */
+    text-align: left;         /* sola hizala */
+  }
 
+  .navbar {
+    flex-wrap: nowrap;        /* alt satıra geçmesin */
+    overflow-x: auto;         /* yana kaydırılabilir */
+    justify-content: flex-start;
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .navbar a,
+  .dropbtn {
+    font-size: 14px;
+    white-space: nowrap;      /* satır atlamasın */
+  }
+
+  .dropdown-content {
+    position: absolute;
+    background-color: #DCD8D5;
+    width: max-content;
+  }
+}
